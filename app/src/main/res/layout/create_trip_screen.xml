@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/fblogin_one" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:id="@+id/rlActionBarTrip"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="12%">
+
+        <ImageButton
+            android:id="@+id/btnBackTrip"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="CREATE TRIP"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlActionBarTrip">
+
+        <EditText
+            android:id="@+id/edNameTrip"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_thin"
+            android:gravity="center"
+            android:hint="Name"
+            android:padding="6dp"
+            android:singleLine="true"
+            android:textColor="#70ffffff"
+            android:textColorHint="#70ffffff"
+            android:textSize="17sp"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="5%" />
+
+        <EditText
+            android:id="@+id/edTypeOfTrip"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/edNameTrip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_thin"
+            android:gravity="center"
+            android:hint="Type"
+            android:padding="6dp"
+            android:singleLine="true"
+            android:textColor="#70ffffff"
+            android:textColorHint="#70ffffff"
+            android:textSize="17sp"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="3%" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlDate"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/edTypeOfTrip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_thin"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="3%">
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Date"
+                android:textColor="#70ffffff"
+                android:textColorHint="#70ffffff"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLocation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/rlDate"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_thin"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="3%">
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Location"
+                android:textColor="#70ffffff"
+                android:textColorHint="#70ffffff"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlPickUp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/rlLocation"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_thin"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="3%">
+
+            <TextView
+                android:id="@+id/txtPickUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:hint="Pick Up"
+                android:textColor="#70ffffff"
+                android:textColorHint="#70ffffff"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btnInviteFriends"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/rlPickUp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_thin"
+            android:text="Invite Friends"
+            android:textColor="#70ffffff"
+            android:textSize="17sp"
+            app:layout_heightPercent="8%"
+            app:layout_marginTopPercent="3%" />
+
+
+        <Button
+            android:id="@+id/btnCreateTrip"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/btnInviteFriends"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_button_orange"
+            android:text="CREATE TRIP"
+            android:textColor="#FF7900"
+            android:textSize="17sp"
+            app:layout_heightPercent="10%"
+            app:layout_marginTopPercent="15%" />
+
+    </android.support.percent.PercentRelativeLayout>
+</android.support.percent.PercentRelativeLayout>

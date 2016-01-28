@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen" />
+
+    <style name="ThemePicker" parent="android:Theme.Light" />
+
+</resources>

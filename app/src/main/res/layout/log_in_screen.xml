@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b3b3b3"
+    tools:context=".activity.LogIn">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pagerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/logo_app"
+        app:layout_marginTopPercent="15%" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/txt_descrition_app"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_marginBottomPercent="31%" />
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/faceBookButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_marginBottomPercent="14.8%"
+        app:layout_marginLeftPercent="7%"
+        app:layout_marginRightPercent="7%" />
+
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/circlePageIndicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:fillColor="#ffffff"
+        app:layout_marginBottomPercent="6.2%"
+        app:pageColor="#70ffffff"
+        app:radius="4dp"
+        app:strokeColor="@android:color/transparent" />
+
+</android.support.percent.PercentRelativeLayout>
