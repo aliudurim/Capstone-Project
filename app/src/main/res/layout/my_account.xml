@@ -10,20 +10,32 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#70000000" />
+        android:background="@color/transparent_image"
+        android:contentDescription="@string/transparent_image" />
 
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@android:color/transparent"
-        android:src="@mipmap/back_button" />
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:contentDescription="@string/action_bar_about_us"
+        app:contentInsetLeft="@dimen/zero_dep"
+        app:contentInsetStart="@dimen/zero_dep">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/width_back_button"
+            android:layout_height="@dimen/height_back_button"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/back_button"
+            android:src="@mipmap/back_button" />
+    </android.support.v7.widget.Toolbar>
+
 
     <ImageView
         android:id="@+id/imgProfilePic"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/profile_pic_dimension"
+        android:layout_height="@dimen/profile_pic_dimension"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/my_account_profile_pic"
         app:layout_marginTopPercent="20%" />
 
     <TextView
@@ -32,8 +44,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgProfilePic"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
-        android:textSize="25sp"
+        android:contentDescription="@string/name_profile"
+        android:textColor="@color/white_background"
+        android:textSize="@dimen/text_size_profile_name"
         app:layout_marginTopPercent="10%" />
 
     <TextView
@@ -42,7 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtName"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
-        android:textSize="25sp"
+        android:contentDescription="@string/email_user"
+        android:textColor="@color/white_background"
+        android:textSize="@dimen/text_size_profile_name"
         app:layout_marginTopPercent="3%" />
 </android.support.percent.PercentRelativeLayout>

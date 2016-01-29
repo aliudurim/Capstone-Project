@@ -4,12 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.durimaliu.capstonestage2.R;
 import com.durimaliu.capstonestage2.adapter.FeedRecyclerViewAdapter;
@@ -60,9 +58,6 @@ public class Feed_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View gv = inflater.inflate(R.layout.feed_screen, container, false);
 
-        System.out.println("Durim L : " + gv);
-
-
         ButterKnife.bind(this, gv);
         setFeedRecyclerViewAdapter();
 
@@ -96,12 +91,10 @@ public class Feed_Fragment extends Fragment {
             @Override
             public void onResponse(Response<List<GetAllTrip>> response) {
 
-                System.out.println("2)response messagee " + response.message());
 
                 progressBar.setVisibility(View.GONE);
                 if (response.code() == 200) {
                     if (response.body() != null) {
-                        System.out.println("3)response messagee " + response.body().size());
                         feedRecyclerViewAdapter.setGetAllTripList(response.body());
                     }
                 } else {
@@ -116,7 +109,6 @@ public class Feed_Fragment extends Fragment {
             @Override
             public void onFailure(Throwable t) {
                 progressBar.setVisibility(View.GONE);
-                System.out.println("5) response messagee " + t.getMessage());
             }
         });
 

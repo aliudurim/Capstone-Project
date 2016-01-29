@@ -3,39 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="@color/fragment_holder_background">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/fragmentViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/rlBottomBar" />
+        android:layout_above="@+id/rlBottomBar"
+        android:contentDescription="@string/pager_fragment_holder" />
 
 
     <android.support.percent.PercentRelativeLayout
         android:id="@+id/rlBottomBar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero_dep"
         android:layout_alignParentBottom="true"
-        android:background="#ffffff"
+        android:background="@color/fragment_holder_background"
+        android:contentDescription="@string/bottom_bar_fragment"
         app:layout_heightPercent="10%">
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="#828181" />
+            android:layout_height="@dimen/half_dp"
+            android:background="@color/fragment_holder_background_view" />
 
         <RelativeLayout
             android:id="@+id/rlCreateTrip"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_dep"
             android:layout_height="match_parent"
+            android:contentDescription="@string/create_trip_icon"
             app:layout_widthPercent="25%">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:paddingBottom="10dp"
+                android:contentDescription="@string/create_trip_icon"
+                android:paddingBottom="@dimen/bottom_image_trip"
                 android:src="@mipmap/add_trip" />
 
             <TextView
@@ -43,19 +47,21 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="2dp"
+                android:layout_marginBottom="@dimen/bottom_trip"
+                android:contentDescription="@string/txt_for_icon"
                 android:gravity="center"
-                android:text="NEW TRIP"
-                android:textColor="#828181"
-                android:textSize="12sp" />
+                android:text="@string/txt_trip"
+                android:textColor="@color/txt_trip"
+                android:textSize="@dimen/text_size_trip" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rlFeed"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_dep"
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/rlCreateTrip"
+            android:contentDescription="@string/feed_icon"
             app:layout_widthPercent="25%">
 
 
@@ -63,8 +69,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="8dp"
-                android:paddingBottom="10dp"
+                android:layout_marginTop="@dimen/feed_icon_margin"
+                android:contentDescription="@string/feed_icon"
+                android:paddingBottom="@dimen/feed_bottom_margin"
                 android:src="@mipmap/feed" />
 
             <TextView
@@ -72,26 +79,29 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="2dp"
+                android:layout_marginBottom="@dimen/txt_bottom_margin_feed"
+                android:contentDescription="@string/txt_for_icon"
                 android:gravity="center"
-                android:text="FEED"
-                android:textColor="#828181"
-                android:textSize="12sp" />
+                android:text="@string/txt_feed"
+                android:textColor="@color/txt_trip"
+                android:textSize="@dimen/size_text_feed" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rlDiscovery"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_dep"
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/rlFeed"
+            android:contentDescription="@string/discovery_icon"
             app:layout_widthPercent="25%">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="8dp"
-                android:paddingBottom="10dp"
+                android:layout_marginTop="@dimen/top_margin_discovery"
+                android:contentDescription="@string/discovery_icon"
+                android:paddingBottom="@dimen/bottom_margin_discovery"
                 android:src="@mipmap/discover" />
 
             <TextView
@@ -99,26 +109,29 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="2dp"
+                android:layout_marginBottom="@dimen/txt_discovery_margin"
+                android:contentDescription="@string/txt_for_icon"
                 android:gravity="center"
-                android:text="DISCOVER"
-                android:textColor="#828181"
-                android:textSize="12sp" />
+                android:text="@string/txt_discovery_text"
+                android:textColor="@color/txt_trip"
+                android:textSize="@dimen/text_size_discovery" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rlProfile"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero_dep"
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/rlDiscovery"
+            android:contentDescription="@string/profile_icon"
             app:layout_widthPercent="25%">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="8dp"
-                android:paddingBottom="10dp"
+                android:layout_marginTop="@dimen/margin_top_icon_profile"
+                android:contentDescription="@string/profile_icon"
+                android:paddingBottom="@dimen/bottom_icon_profile"
                 android:src="@mipmap/profile" />
 
             <TextView
@@ -126,11 +139,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="2dp"
+                android:layout_marginBottom="@dimen/bottom_profile_margin"
+                android:contentDescription="@string/txt_for_icon"
                 android:gravity="center"
-                android:text="PROFILE"
-                android:textColor="#828181"
-                android:textSize="12sp" />
+                android:text="@string/profile_text"
+                android:textColor="@color/txt_trip"
+                android:textSize="@dimen/text_size_profile" />
         </RelativeLayout>
 
     </android.support.percent.PercentRelativeLayout>

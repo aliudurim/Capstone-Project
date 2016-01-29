@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="@color/white_background"
     android:orientation="vertical">
 
 
@@ -12,34 +12,38 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingTop="400dp" />
+        android:contentDescription="@string/list_profile"
+        android:paddingTop="@dimen/top_padding_list" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="@android:style/Widget.Holo.Light.ProgressBar.Small"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/progress_bar_dimension"
+        android:layout_height="@dimen/progress_bar_dimension"
         android:layout_below="@+id/rlHeaderProfile"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@dimen/progress_bar_margin_top"
+        android:contentDescription="@string/loader_response"
         android:visibility="gone" />
 
     <android.support.percent.PercentRelativeLayout
         android:id="@+id/rlHeaderProfile"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero_dep"
+        android:contentDescription="@string/header_profile_screen"
         app:layout_heightPercent="50%">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="#b3b3b3"
+            android:layout_height="@dimen/zero_dep"
+            android:background="@color/login_backround"
             app:layout_heightPercent="50%">
 
             <ImageView
                 android:id="@+id/imgBackgroundProfile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/background_profile"
                 android:scaleType="centerCrop"
                 android:src="@mipmap/pic_one" />
 
@@ -47,16 +51,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="0.4"
-                android:background="#000000" />
+                android:background="@color/black"
+                android:contentDescription="@string/view_for_split" />
         </RelativeLayout>
 
 
         <ImageButton
             android:id="@+id/btnSettings"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/btn_settings_dimens"
+            android:layout_height="@dimen/btn_settings_dimens"
             android:layout_alignParentRight="true"
             android:background="@android:color/transparent"
+            android:contentDescription="@string/button_settings"
             android:src="@mipmap/settings" />
 
         <TextView
@@ -64,33 +70,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Durim Aliu"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:contentDescription="@string/profile_name"
+            android:textColor="@color/white_background"
+            android:textSize="@dimen/settings_dimens"
             android:textStyle="bold"
             app:layout_marginTopPercent="10%" />
 
         <ImageView
             android:id="@+id/imgProfilePic"
-            android:layout_width="105dp"
-            android:layout_height="105dp"
+            android:layout_width="@dimen/prof_pic"
+            android:layout_height="@dimen/prof_pic"
             android:layout_centerInParent="true"
+            android:contentDescription="@string/profile_pic_screen"
             android:scaleType="centerCrop" />
 
         <LinearLayout
             android:id="@+id/rlChangeTrips"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero_dep"
             android:layout_alignParentBottom="true"
+            android:contentDescription="@string/container_trips"
             android:orientation="horizontal"
             android:weightSum="3"
             app:layout_heightPercent="25%">
 
             <RelativeLayout
                 android:id="@+id/rlUpcomingTrips"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero_dep"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:contentDescription="@string/container_up">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -103,45 +112,48 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/upcoming_trips"
                         android:gravity="center"
-                        android:text="UPCOMING"
-                        android:textColor="#828181"
-                        android:textSize="16sp" />
+                        android:text="@string/upcomming_text"
+                        android:textColor="@color/txt_trip"
+                        android:textSize="@dimen/upcoming_trips" />
 
                     <TextView
                         android:id="@+id/txtUpcomingTripsNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/view_split_margin"
+                        android:contentDescription="@string/number_upcoming_trips"
                         android:gravity="center"
-                        android:textColor="#828181"
-                        android:textSize="16sp" />
+                        android:textColor="@color/txt_trip"
+                        android:textSize="@dimen/upcoming_trips" />
                 </LinearLayout>
 
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="@dimen/width"
                     android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="#b3b3b3" />
+                    android:layout_marginBottom="@dimen/bottom"
+                    android:layout_marginTop="@dimen/top"
+                    android:background="@color/login_backround" />
 
                 <View
                     android:id="@+id/view1"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="@dimen/view_h"
                     android:layout_alignParentBottom="true"
-                    android:background="#000000"
+                    android:background="@color/black"
                     android:visibility="gone" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/rlYourTrips"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/zero_dep"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/rlUpcomingTrips"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:contentDescription="@string/container_your_trips">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -154,28 +166,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/your_trips"
                         android:gravity="center"
-                        android:text="YOUR TRIPS"
-                        android:textColor="#828181"
-                        android:textSize="16sp" />
+                        android:text="@string/your_trips_text"
+                        android:textColor="@color/txt_trip"
+                        android:textSize="@dimen/upcoming_trips" />
 
                     <TextView
                         android:id="@+id/txtYourTripsNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/view_split_margin"
+                        android:contentDescription="@string/your_trips_number"
                         android:gravity="center"
-                        android:textColor="#828181"
-                        android:textSize="16sp" />
+                        android:textColor="@color/txt_trip"
+                        android:textSize="@dimen/upcoming_trips" />
                 </LinearLayout>
 
                 <View
                     android:id="@+id/view2"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="@dimen/view_h"
                     android:layout_alignParentBottom="true"
-                    android:background="#000000" />
+                    android:background="@color/black" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -183,14 +197,15 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/rlYourTrips"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:contentDescription="@string/container_preview">
 
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="@dimen/width"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="#b3b3b3" />
+                    android:layout_marginBottom="@dimen/bottom"
+                    android:layout_marginTop="@dimen/top"
+                    android:background="@color/login_backround" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -203,36 +218,38 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/previous_trips"
                         android:gravity="center"
-                        android:text="PREVIOUS"
-                        android:textColor="#828181"
-                        android:textSize="16sp" />
+                        android:text="@string/previous_text"
+                        android:textColor="@color/txt_trip"
+                        android:textSize="@dimen/upcoming_trips" />
 
                     <TextView
                         android:id="@+id/txtPreviousTripsNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/view_split_margin"
+                        android:contentDescription="@string/previous_tips_number"
                         android:gravity="center"
-                        android:textColor="#828181"
-                        android:textSize="16sp" />
+                        android:textColor="@color/txt_trip"
+                        android:textSize="@dimen/upcoming_trips" />
                 </LinearLayout>
 
                 <View
                     android:id="@+id/view3"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
+                    android:layout_height="@dimen/view_h"
                     android:layout_alignParentBottom="true"
-                    android:background="#000000"
+                    android:background="@color/black"
                     android:visibility="gone" />
             </RelativeLayout>
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="@dimen/width"
             android:layout_alignParentBottom="true"
-            android:background="#b3b3b3" />
+            android:background="@color/login_backround" />
     </android.support.percent.PercentRelativeLayout>
 </android.support.percent.PercentRelativeLayout>

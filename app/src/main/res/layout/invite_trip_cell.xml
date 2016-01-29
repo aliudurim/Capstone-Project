@@ -7,26 +7,28 @@
     <RelativeLayout
         android:id="@+id/rlInviteCell"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#ffffff">
+        android:layout_height="@dimen/invite_cell_height"
+        android:background="@color/white_background"
+        android:contentDescription="@string/invite_cell">
 
         <ImageView
             android:id="@+id/imgProfileCell"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/img_profile_cell_dimens"
+            android:layout_height="@dimen/img_profile_cell_dimens"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginStart="@dimen/settings_dimens"
+            android:contentDescription="@string/profile_pic_invite" />
 
         <TextView
             android:id="@+id/txtNameFrends"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="@dimen/settings_dimens"
             android:layout_toRightOf="@+id/imgProfileCell"
-            android:text="Durim Aliu"
-            android:textColor="#828181"
-            android:textSize="18sp" />
+            android:contentDescription="@string/name_of_invited_friends"
+            android:textColor="@color/txt_trip"
+            android:textSize="@dimen/name_frends_text_size" />
 
 
         <ImageButton
@@ -35,15 +37,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="@dimen/img_invite_margin"
             android:background="@android:color/transparent"
+            android:contentDescription="@string/button_invite_friends"
             android:src="@mipmap/invite" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/half_dp"
             android:layout_alignParentBottom="true"
-            android:background="#828181" />
+            android:background="@color/txt_trip" />
 
     </RelativeLayout>
 </LinearLayout>

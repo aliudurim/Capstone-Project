@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,12 +47,16 @@ public class CreateTrip extends Activity {
     @Bind(R.id.txtPickUp)
     TextView txtPickUp;
 
+    @Bind(R.id.progressBar)
+    ProgressBar progressBar;
+
     RequestCallBack reqCall;
     Retrofit retrofit;
 
     double lat_location, longi_location;
     double lat_pickup, longi_pickup;
     String invited_friends = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -184,16 +190,15 @@ public class CreateTrip extends Activity {
                 String.valueOf(lat_pickup),
                 invited_friends);
 
+        progressBar.setVisibility(View.VISIBLE);
 //        System.out.println("Durim list2 : " + invited_friends);
         createTrip.enqueue(new Callback<ResponseTrip>() {
             @Override
             public void onResponse(Response<ResponseTrip> response) {
 
-                System.out.println("Durim aliu1 : "+response.message());
-
+                progressBar.setVisibility(View.GONE);
                 if (response.code() == 200) {
                     if (response.body() != null) {
-                        System.out.println("Durim aliu2 : "+response.body());
                         Toast.makeText(CreateTrip.this, "Your Trip Is Created", Toast.LENGTH_SHORT).show();
                         finish();
                     }
@@ -202,7 +207,7 @@ public class CreateTrip extends Activity {
 
             @Override
             public void onFailure(Throwable t) {
-                System.out.println("Durim aliu3 : "+t.getMessage());
+                progressBar.setVisibility(View.GONE);
             }
         });
 

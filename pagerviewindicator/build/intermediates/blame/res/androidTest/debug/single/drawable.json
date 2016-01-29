@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable/vpi__tab_indicator.xml",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/drawable/vpi__tab_indicator.xml"
+    },
+    {
         "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable/vpi__tab_indicator.xml",
         "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable/vpi__tab_indicator.xml"
     }

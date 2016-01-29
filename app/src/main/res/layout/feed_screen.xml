@@ -10,27 +10,31 @@
         android:id="@+id/rlHeaderFeed"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:contentDescription="@string/header_feed"
         app:layout_heightPercent="11%">
 
         <View
             android:id="@+id/viewEmpty"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:contentDescription="@string/view_empty"
             app:layout_heightPercent="40%" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/viewEmpty">
+            android:layout_below="@+id/viewEmpty"
+            android:contentDescription="@string/sub_header">
 
             <TextView
                 android:id="@+id/txtTrips"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:contentDescription="@string/trip_title"
                 android:text="TRIPS"
-                android:textColor="#828181"
-                android:textSize="19sp"
+                android:textColor="@color/txt_trip"
+                android:textSize="@dimen/trips_title_size"
                 android:textStyle="bold" />
 
 
@@ -43,14 +47,16 @@
         android:id="@+id/feedRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rlHeaderFeed" />
+        android:layout_below="@+id/rlHeaderFeed"
+        android:contentDescription="@string/list_feed" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="@android:style/Widget.Holo.Light.ProgressBar.Small"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/progress_bar_dimension"
+        android:layout_height="@dimen/progress_bar_dimension"
         android:layout_centerInParent="true"
+        android:contentDescription="@string/loader_response"
         android:visibility="gone" />
 
 </android.support.percent.PercentRelativeLayout>

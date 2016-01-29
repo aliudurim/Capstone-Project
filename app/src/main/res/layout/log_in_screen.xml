@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b3b3b3"
+    android:background="@color/login_backround"
     tools:context=".activity.LogIn">
 
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pagerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="@string/content_pager" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/logo_app"
         android:scaleType="centerCrop"
         android:src="@mipmap/logo_app"
         app:layout_marginTopPercent="15%" />
@@ -26,10 +28,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/content_trip"
         android:gravity="center"
         android:text="@string/txt_descrition_app"
-        android:textColor="#ffffff"
-        android:textSize="14sp"
+        android:textColor="@color/txt_login_color"
+        android:textSize="@dimen/description_txt_login"
         app:layout_marginBottomPercent="31%" />
 
 
@@ -39,8 +42,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/facebook_button"
         android:textAllCaps="true"
-        android:textSize="16sp"
+        android:textSize="@dimen/facebook_text_size"
         app:layout_marginBottomPercent="14.8%"
         app:layout_marginLeftPercent="7%"
         app:layout_marginRightPercent="7%" />
@@ -51,10 +55,11 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:fillColor="#ffffff"
+        android:contentDescription="@string/circle_page"
+        app:fillColor="@color/circle_page_indicator_fill"
         app:layout_marginBottomPercent="6.2%"
-        app:pageColor="#70ffffff"
-        app:radius="4dp"
+        app:pageColor="@color/circle_page_indicator_page"
+        app:radius="@dimen/circle_page_indicator_radius"
         app:strokeColor="@android:color/transparent" />
 
 </android.support.percent.PercentRelativeLayout>

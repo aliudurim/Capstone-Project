@@ -8,32 +8,34 @@
     <RelativeLayout
         android:id="@+id/rlCellDetailTrip"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#ffffff">
+        android:layout_height="@dimen/cell_detail_height"
+        android:background="@color/white_background"
+        android:contentDescription="@string/cell_detail_trip">
 
         <ImageView
             android:id="@+id/imgProfileCell"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/profile_image_dimension"
+            android:layout_height="@dimen/profile_image_dimension"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginStart="@dimen/settings_dimens"
+            android:contentDescription="@string/profile_pic_detail" />
 
         <TextView
             android:id="@+id/txtNamePeopleJoined"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="@dimen/settings_dimens"
             android:layout_toRightOf="@+id/imgProfileCell"
-            android:text="Durim Aliu"
-            android:textColor="#828181"
-            android:textSize="18sp" />
+            android:contentDescription="@string/name_user_joned"
+            android:textColor="@color/txt_trip"
+            android:textSize="@dimen/text_size_settings" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_alignParentBottom="true"
-            android:background="#828181" />
+            android:background="@color/txt_trip" />
 
     </RelativeLayout>
 </RelativeLayout>

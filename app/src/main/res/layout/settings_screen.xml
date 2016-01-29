@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="@color/white_background">
 
     <ImageView
         android:layout_width="match_parent"
@@ -14,43 +14,51 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.5"
-        android:background="#000000" />
+        android:background="@color/transparent_image" />
 
-    <RelativeLayout
+
+    <android.support.v7.widget.Toolbar
         android:id="@+id/rlActionBar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero_dep"
+        android:contentDescription="@string/action_bar_settings"
+        app:contentInsetLeft="@dimen/zero_dep"
+        app:contentInsetStart="@dimen/zero_dep"
         app:layout_heightPercent="12%">
 
         <ImageButton
             android:id="@+id/btnBack"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/width_back_button"
+            android:layout_height="@dimen/height_back_button"
             android:layout_centerVertical="true"
             android:background="@android:color/transparent"
+            android:contentDescription="@string/back_button"
             android:src="@mipmap/back_button" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="SETTINGS"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:layout_marginStart="@dimen/margin_detail"
+            android:contentDescription="@string/title_settings"
+            android:text="@string/settings_text"
+            android:textColor="@color/white_background"
+            android:textSize="@dimen/settings_dimens"
             android:textStyle="bold" />
-    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
 
     <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/rlActionBar"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="@dimen/margin_top_percent"
+        android:contentDescription="@string/content_settings">
 
         <RelativeLayout
             android:id="@+id/rlMyAccount"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:contentDescription="@string/container_my_account"
             app:layout_heightPercent="10%">
 
 
@@ -58,18 +66,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:text="My Account"
-                android:textColor="#A5A5A5"
-                android:textSize="18sp" />
+                android:layout_marginStart="@dimen/settings_dimens"
+                android:contentDescription="@string/container_text"
+                android:text="@string/my_account_text"
+                android:textColor="@color/my_account_color"
+                android:textSize="@dimen/text_size_settings" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.4dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="#ffffff" />
+                android:layout_marginEnd="@dimen/settings_dimens"
+                android:layout_marginStart="@dimen/settings_dimens"
+                android:background="@color/white_background" />
         </RelativeLayout>
 
 
@@ -78,6 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_below="@+id/rlMyAccount"
+            android:contentDescription="@string/container_notification"
             app:layout_heightPercent="10%">
 
 
@@ -85,18 +95,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:text="Notification"
-                android:textColor="#A5A5A5"
-                android:textSize="18sp" />
+                android:layout_marginStart="@dimen/settings_dimens"
+                android:contentDescription="@string/container_text_notification"
+                android:text="@string/notification_text"
+                android:textColor="@color/my_account_color"
+                android:textSize="@dimen/text_size_settings" />
+
+            <ToggleButton
+                android:id="@+id/chkState"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/settings_dimens"
+                android:background="@drawable/toggle_selector"
+                android:contentDescription="@string/toggle_button"
+                android:textOff=""
+                android:textOn="" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.4dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="#ffffff" />
+                android:layout_marginEnd="@dimen/settings_dimens"
+                android:layout_marginStart="@dimen/settings_dimens"
+                android:background="@color/white_background" />
         </RelativeLayout>
 
 
@@ -105,35 +128,27 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_below="@+id/rlNotification"
+            android:contentDescription="@string/container_send_feed_back"
             app:layout_heightPercent="10%">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:text="Send FeedBack"
-                android:textColor="#A5A5A5"
-                android:textSize="18sp" />
+                android:layout_marginStart="@dimen/settings_dimens"
+                android:contentDescription="@string/text_feed_back"
+                android:text="@string/send_feedback_text"
+                android:textColor="@color/my_account_color"
+                android:textSize="@dimen/text_size_settings" />
 
-            <ToggleButton
-                android:id="@+id/chkState"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/toggle_selector"
-                android:textOff=""
-                android:textOn="" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.4dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="#ffffff" />
+                android:layout_marginEnd="@dimen/settings_dimens"
+                android:layout_marginStart="@dimen/settings_dimens"
+                android:background="@color/white_background" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -141,24 +156,26 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_below="@+id/rlSendFeedBack"
+            android:contentDescription="container about us"
             app:layout_heightPercent="10%">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:text="About Us"
-                android:textColor="#A5A5A5"
-                android:textSize="18sp" />
+                android:layout_marginStart="@dimen/settings_dimens"
+                android:contentDescription="container text about us"
+                android:text="@string/about_us_text"
+                android:textColor="@color/my_account_color"
+                android:textSize="@dimen/settings_dimens" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.4dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="#ffffff" />
+                android:layout_marginEnd="@dimen/settings_dimens"
+                android:layout_marginStart="@dimen/settings_dimens"
+                android:background="@color/white_background" />
         </RelativeLayout>
     </android.support.percent.PercentRelativeLayout>
 

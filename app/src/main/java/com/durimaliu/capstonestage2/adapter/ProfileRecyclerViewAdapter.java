@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.durimaliu.capstonestage2.R;
 import com.durimaliu.capstonestage2.activity.DetailOfTrip;
@@ -43,6 +44,12 @@ public class ProfileRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         @Bind(R.id.rlCellProfile)
         RelativeLayout rlCellProfile;
 
+        @Bind(R.id.txtTitleOfTip)
+        TextView txtTitleOfTip;
+
+        @Bind(R.id.txtTypeOfTrip)
+        TextView txtTypeOfTrip;
+
         public RecycleHolder(View v) {
             super(v);
             ButterKnife.bind(this, v);
@@ -68,6 +75,8 @@ public class ProfileRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
                 ctx.startActivity(intent);
             }
         });
+        ((RecycleHolder) holder).txtTitleOfTip.setText("" + getAllTripList.get(position).getName());
+        ((RecycleHolder) holder).txtTypeOfTrip.setText("" + getAllTripList.get(position).getType());
     }
 
     @Override

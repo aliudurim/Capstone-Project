@@ -9,19 +9,22 @@
     <RelativeLayout
         android:id="@+id/rlHeaderDetailTrip"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:contentDescription="@string/header_detail_trip">
 
         <RelativeLayout
             android:id="@+id/rlContent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:contentDescription="@string/content_detail_trip">
 
             <ImageView
                 android:id="@+id/imgProfileDetail"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/profile_pic_dimension_detail"
+                android:layout_height="@dimen/profile_pic_dimension_detail"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="@dimen/settings_dimens"
+                android:contentDescription="@string/profile_image_detail_trip" />
 
             <TextView
                 android:id="@+id/txtProfileCreator"
@@ -29,10 +32,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imgProfileDetail"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="@dimen/settings_dimens"
+                android:contentDescription="@string/creator_name"
                 android:text=""
-                android:textColor="#ffffff"
-                android:textSize="18sp" />
+                android:textColor="@color/white_background"
+                android:textSize="@dimen/text_size_settings" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -46,16 +50,17 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imgProfileDetail"
                     android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/name_trip"
                     android:text=""
-                    android:textColor="#ffffff"
-                    android:textSize="23sp" />
+                    android:textColor="@color/white_background"
+                    android:textSize="@dimen/name_of_trip_creator_text_size" />
 
                 <View
-                    android:layout_width="70dp"
-                    android:layout_height="1dp"
+                    android:layout_width="@dimen/view_width"
+                    android:layout_height="@dimen/view_height"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:background="#ffffff" />
+                    android:layout_marginTop="@dimen/settings_dimens"
+                    android:background="@color/white_background" />
 
                 <TextView
                     android:id="@+id/txtTypeCreator"
@@ -63,38 +68,43 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imgProfileDetail"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="@dimen/settings_dimens"
+                    android:contentDescription="@string/type_of_trip"
                     android:text=""
-                    android:textColor="#ffffff"
-                    android:textSize="18sp" />
+                    android:textColor="@color/white_background"
+                    android:textSize="@dimen/text_size_settings" />
             </LinearLayout>
 
 
             <RelativeLayout
                 android:id="@+id/rlJoinTrip"
-                android:layout_width="100dp"
-                android:layout_height="35dp"
+                android:layout_width="@dimen/join_trip_width"
+                android:layout_height="@dimen/join_trip_height"
                 android:layout_above="@+id/rlBottomBar"
                 android:layout_alignParentRight="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/rounded_button">
+                android:layout_marginBottom="@dimen/join_trip_margin"
+                android:layout_marginEnd="@dimen/join_trip_margin"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/join_trip">
 
                 <TextView
                     android:id="@+id/txtJoinTrip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:contentDescription="@string/join_trip"
                     android:text=""
-                    android:textSize="17sp" />
+                    android:textColor="@color/white_background"
+                    android:textSize="@dimen/join_trip_text_size" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/rlBottomBar"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="@dimen/bottom_bar_height"
                 android:layout_alignParentBottom="true"
-                android:background="#ffffff">
+                android:background="@color/white_background"
+                android:contentDescription="@string/bottom_bar">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -105,13 +115,14 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#50ffffff" />
+                    android:background="@color/image_map_background" />
 
                 <RelativeLayout
                     android:id="@+id/rlJoinedFriends"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_alignParentBottom="true">
+                    android:layout_height="@dimen/action_bar_height"
+                    android:layout_alignParentBottom="true"
+                    android:contentDescription="@string/joined_container">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -123,17 +134,19 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:text="JOINED FRIENDS"
-                            android:textColor="#323232"
-                            android:textSize="17sp" />
+                            android:contentDescription="@string/text_joined"
+                            android:text="@string/join_friends_text"
+                            android:textColor="@color/detail_background"
+                            android:textSize="@dimen/join_friends_text_size" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:text="V"
-                            android:textColor="#323232"
-                            android:textSize="17sp" />
+                            android:contentDescription="@string/fake_icon"
+                            android:text="@string/v_text"
+                            android:textColor="@color/detail_background"
+                            android:textSize="@dimen/join_friends_text_size" />
                     </LinearLayout>
 
                 </RelativeLayout>

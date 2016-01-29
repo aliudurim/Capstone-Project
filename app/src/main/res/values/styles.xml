@@ -2,7 +2,12 @@
 
     <!-- Base application theme. -->
 
-    <style name="AppTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen" />
+    <!--<style name="AppTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen" />-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
 
     <style name="ThemePicker" parent="android:Theme.Light" />
 

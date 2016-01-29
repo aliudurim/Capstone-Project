@@ -1,17 +1,5 @@
 [
     {
-        "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_holo.9.png",
-        "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_holo.9.png"
-    },
-    {
-        "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png",
-        "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png"
-    },
-    {
-        "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_pressed_holo.9.png",
-        "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_pressed_holo.9.png"
-    },
-    {
         "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_unselected_pressed_holo.9.png",
         "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_pressed_holo.9.png"
     },
@@ -20,7 +8,43 @@
         "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_holo.9.png"
     },
     {
+        "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png",
+        "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png"
+    },
+    {
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_focused_holo.9.png"
+    },
+    {
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_unselected_holo.9.png",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_holo.9.png"
+    },
+    {
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_unselected_pressed_holo.9.png",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_pressed_holo.9.png"
+    },
+    {
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_pressed_holo.9.png",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
         "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_unselected_focused_holo.9.png",
         "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_focused_holo.9.png"
+    },
+    {
+        "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_holo.9.png",
+        "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_holo.9.png"
+    },
+    {
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_unselected_focused_holo.9.png",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_unselected_focused_holo.9.png"
+    },
+    {
+        "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_pressed_holo.9.png",
+        "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_pressed_holo.9.png"
+    },
+    {
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4/vpi__tab_selected_holo.9.png",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/drawable-mdpi-v4/vpi__tab_selected_holo.9.png"
     }
 ]

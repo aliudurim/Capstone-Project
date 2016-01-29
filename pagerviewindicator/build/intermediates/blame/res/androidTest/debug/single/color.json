@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/color/vpi__dark_theme.xml",
-        "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/color/vpi__dark_theme.xml"
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/color/vpi__dark_theme.xml",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/color/vpi__dark_theme.xml"
+    },
+    {
+        "merged": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/color/vpi__light_theme.xml",
+        "source": "/Users/DurimAliu/Desktop/CapstoneStage2Git/Capstone-Project/pagerviewindicator/build/intermediates/bundles/debug/res/color/vpi__light_theme.xml"
     },
     {
         "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/color/vpi__light_theme.xml",
         "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/color/vpi__light_theme.xml"
+    },
+    {
+        "merged": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/res/merged/androidTest/debug/color/vpi__dark_theme.xml",
+        "source": "/Users/macbook/Desktop/UdaCity/CapstoneStage2/pagerviewindicator/build/intermediates/bundles/debug/res/color/vpi__dark_theme.xml"
     }
 ]

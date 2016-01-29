@@ -8,22 +8,23 @@
     <RelativeLayout
         android:id="@+id/rlCellMenuTrip"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="@dimen/rl_cell_menu_trip_height"
+        android:contentDescription="@string/menu_trip_cell">
 
         <TextView
             android:id="@+id/txtNameOfType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="HIKING"
-            android:textColor="#323232"
-            android:textSize="16sp"
+            android:contentDescription="@string/name_of_trip"
+            android:textColor="@color/detail_background"
+            android:textSize="@dimen/txt_name_of_type_text_size"
             android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
+            android:layout_height="@dimen/half_dp"
             android:layout_alignParentBottom="true"
-            android:background="#323232" />
+            android:background="@color/detail_background" />
     </RelativeLayout>
 </RelativeLayout>

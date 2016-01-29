@@ -5,16 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.durimaliu.capstonestage2.R;
-import com.durimaliu.capstonestage2.adapter.FeedRecyclerViewAdapter;
 import com.durimaliu.capstonestage2.adapter.InviteFriendsAdapter;
 import com.durimaliu.capstonestage2.object.FbFriend;
-import com.durimaliu.capstonestage2.object.UserToken;
 import com.durimaliu.capstonestage2.request.RequestCallBack;
 import com.durimaliu.capstonestage2.utilitys.Utilitys;
 import com.durimaliu.capstonestage2.utilitys.appPreferences;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +45,9 @@ public class InviteFriends extends Activity {
 
     Intent returnIntent = new Intent();
 
+    @Bind(R.id.progressBar)
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,10 +76,11 @@ public class InviteFriends extends Activity {
 
         Call<List<FbFriend>> getFbFriends = reqCall.getFaceBookFriends(appPreferences.getUserToken().getToken(), appPreferences.getFaceBookTokenResponse());
 
+        progressBar.setVisibility(View.VISIBLE);
         getFbFriends.enqueue(new Callback<List<FbFriend>>() {
             @Override
             public void onResponse(Response<List<FbFriend>> response) {
-
+                progressBar.setVisibility(View.GONE);
                 if (response.code() == 200) {
                     if (response.body() != null) {
                         inviteFriendsAdapter.setGetFbFriends(response.body());
@@ -87,6 +90,7 @@ public class InviteFriends extends Activity {
 
             @Override
             public void onFailure(Throwable t) {
+                progressBar.setVisibility(View.GONE);
             }
         });
     }

@@ -3,4 +3,36 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="login_backround">#b3b3b3</color>
+
+    <color name="detail_background">#323232</color>
+
+    <color name="txt_login_color">#ffffff</color>
+
+    <color name="circle_page_indicator_fill">#ffffff</color>
+    <color name="circle_page_indicator_page">#70ffffff</color>
+
+    <color name="fragment_holder_background">#ffffff</color>
+    <color name="fragment_holder_background_view">#828181</color>
+
+    <color name="txt_trip">#828181</color>
+
+    <color name="transparent_image">#70000000</color>
+
+    <color name="txt_color">#ffffff</color>
+
+    <color name="txt_color_transparent">#70ffffff</color>
+
+    <color name="img_transparent">#50000000</color>
+
+    <color name="create_trip_text_color">#FF7900</color>
+
+
+    <color name="white_background">#ffffff</color>
+
+    <color name="my_account_color">#A5A5A5</color>
+
+    <color name="image_map_background">#50ffffff</color>
+    <color name="black">#000000</color>
+
 </resources>

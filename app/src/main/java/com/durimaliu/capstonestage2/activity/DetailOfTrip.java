@@ -5,20 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.durimaliu.capstonestage2.R;
 import com.durimaliu.capstonestage2.adapter.DetailTripRecyclerViewAdapter;
-import com.durimaliu.capstonestage2.adapter.FeedRecyclerViewAdapter;
-import com.durimaliu.capstonestage2.customclass.CircleTransform;
 import com.durimaliu.capstonestage2.object.GetTripById;
 import com.durimaliu.capstonestage2.object.ResponseTrip;
-import com.durimaliu.capstonestage2.object.UserToken;
 import com.durimaliu.capstonestage2.request.RequestCallBack;
 import com.durimaliu.capstonestage2.utilitys.Utilitys;
 import com.durimaliu.capstonestage2.utilitys.appPreferences;
-import com.google.gson.Gson;
-import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -50,6 +47,9 @@ public class DetailOfTrip extends Activity {
 
 
     String id = "";
+
+    @Bind(R.id.progressBar)
+    ProgressBar progressBar;
 
     public static DetailOfTrip detailOfTrip;
 
@@ -90,10 +90,11 @@ public class DetailOfTrip extends Activity {
     private void getTripById(String id) {
         Call<GetTripById> getTripByIdCall = reqCall.getTripById(id, appPreferences.getUserToken().getToken());
 
+        progressBar.setVisibility(View.VISIBLE);
         getTripByIdCall.enqueue(new Callback<GetTripById>() {
             @Override
             public void onResponse(Response<GetTripById> response) {
-
+                progressBar.setVisibility(View.GONE);
                 if (response.code() == 200) {
                     if (response.body() != null) {
                         detailTripRecyclerViewAdapter.setGetTripById(response.body());
@@ -103,6 +104,7 @@ public class DetailOfTrip extends Activity {
 
             @Override
             public void onFailure(Throwable t) {
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
@@ -114,10 +116,11 @@ public class DetailOfTrip extends Activity {
         } else {
             joinOrUnJoinedTrip = reqCall.joinedTrip(id, appPreferences.getUserToken().getToken());
         }
-
+        progressBar.setVisibility(View.VISIBLE);
         joinOrUnJoinedTrip.enqueue(new Callback<ResponseTrip>() {
             @Override
             public void onResponse(Response<ResponseTrip> response) {
+                progressBar.setVisibility(View.GONE);
                 if (response.code() == 200) {
                     if (response.body() != null) {
                         getTripById(id);
@@ -127,6 +130,7 @@ public class DetailOfTrip extends Activity {
 
             @Override
             public void onFailure(Throwable t) {
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
