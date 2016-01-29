@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'DurimAliu'
+            keyPassword 'ntrip123#'
+            storeFile file('/Users/macbook/Desktop/CapstoneFromGithub/Capstone-Project/app/build/outputs/ntrip_key.jks')
+            storePassword 'ntrip123#'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
-
     defaultConfig {
         applicationId "com.durimaliu.capstonestage2"
         minSdkVersion 17
@@ -15,6 +22,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }

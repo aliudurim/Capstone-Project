@@ -10,11 +10,13 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 import com.durimaliu.capstonestage2.R;
+import com.durimaliu.capstonestage2.activity.Ntrip;
 import com.durimaliu.capstonestage2.adapter.FeedRecyclerViewAdapter;
 import com.durimaliu.capstonestage2.object.GetAllTrip;
 import com.durimaliu.capstonestage2.request.RequestCallBack;
 import com.durimaliu.capstonestage2.utilitys.Utilitys;
 import com.durimaliu.capstonestage2.utilitys.appPreferences;
+import com.google.android.gms.analytics.Tracker;
 
 import java.io.IOException;
 import java.util.List;
@@ -54,12 +56,15 @@ public class Feed_Fragment extends Fragment {
     RequestCallBack reqCall;
     Retrofit retrofit;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View gv = inflater.inflate(R.layout.feed_screen, container, false);
 
         ButterKnife.bind(this, gv);
         setFeedRecyclerViewAdapter();
+
 
 
         retrofit = new Retrofit.Builder()

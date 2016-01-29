@@ -9,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import com.durimaliu.capstonestage2.R;
 import com.durimaliu.capstonestage2.adapter.FragmentHolderAdapter;
 import com.durimaliu.capstonestage2.utilitys.appPreferences;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -27,6 +29,7 @@ public class FragmentHolder extends FragmentActivity {
 
     FragmentHolderAdapter fragmentHolderAdapter;
 
+    Tracker t;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,9 @@ public class FragmentHolder extends FragmentActivity {
         ButterKnife.bind(this);
         setFragmentHolderAdapter();
 
-
+        // Get tracker.
+        t = ((Ntrip) getApplication()).getTracker(
+                Ntrip.TrackerName.APP_TRACKER);
     }
 
     private void setFragmentHolderAdapter() {
@@ -83,5 +88,12 @@ public class FragmentHolder extends FragmentActivity {
             intent_detail.putExtra("type", "skiing");
             startActivity(intent_detail);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        t.setScreenName("FragmentHolder");
+        t.send(new HitBuilders.ScreenViewBuilder().build());
     }
 }

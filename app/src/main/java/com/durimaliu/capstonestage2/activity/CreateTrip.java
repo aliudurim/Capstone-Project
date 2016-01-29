@@ -16,6 +16,10 @@ import com.durimaliu.capstonestage2.object.ResponseTrip;
 import com.durimaliu.capstonestage2.request.RequestCallBack;
 import com.durimaliu.capstonestage2.utilitys.Utilitys;
 import com.durimaliu.capstonestage2.utilitys.appPreferences;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import java.text.DecimalFormat;
 import java.util.Calendar;
@@ -58,17 +62,28 @@ public class CreateTrip extends Activity {
     String invited_friends = "";
 
 
+    Tracker t;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_trip_screen);
         ButterKnife.bind(this);
 
+        // Get tracker.
+        t = ((Ntrip) getApplication()).getTracker(
+                Ntrip.TrackerName.APP_TRACKER);
+
         retrofit = new Retrofit.Builder()
                 .baseUrl(Utilitys.baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         reqCall = retrofit.create(RequestCallBack.class);
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
+
+        mAdView.loadAd(adRequest);
     }
 
     @OnClick(R.id.rlLocation)
@@ -216,5 +231,13 @@ public class CreateTrip extends Activity {
     @OnClick(R.id.btnBackTrip)
     public void finishClass() {
         finish();
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        t.setScreenName("CreateTrip");
+        t.send(new HitBuilders.ScreenViewBuilder().build());
     }
 }

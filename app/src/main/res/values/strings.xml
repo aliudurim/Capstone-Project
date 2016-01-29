@@ -136,4 +136,8 @@
     <string name="text_feed_back">container text send feedback</string>
     <string name="toggle_button">toggle button</string>
     <string name="view_pager_image">view pager imageview</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-9349545836979623/2028029993</string>
+    <string name="banner_text">BANNER</string>
+
 </resources>

@@ -5,11 +5,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 
+import com.durimaliu.capstonestage2.BuildConfig;
 import com.durimaliu.capstonestage2.R;
 import com.durimaliu.capstonestage2.adapter.ViewPagerAdapter;
 import com.durimaliu.capstonestage2.callback.CustomFaceBookCallBack;
@@ -78,6 +80,7 @@ public class LogIn extends Activity implements CustomFaceBookCallBack {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.log_in_screen);
+
         appPreferences.init(this);
         Utilitys.initScreenSize(this);
         ButterKnife.bind(this);
