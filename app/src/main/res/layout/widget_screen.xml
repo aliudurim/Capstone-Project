@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/img_backround_trip"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/pic_one" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90000000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNameOfTripWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/name_trip"
+            android:textColor="@color/white_background"
+            android:textSize="@dimen/settings_dimens" />
+
+        <ImageView
+            android:layout_width="@dimen/view_split_width"
+            android:layout_height="@dimen/view_split_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/view_split_margin"
+            android:background="@color/white_background"
+            android:contentDescription="@string/view_for_split" />
+
+        <TextView
+            android:id="@+id/txtTypeWidget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/view_split_margin"
+            android:contentDescription="@string/type_of_trip"
+            android:textColor="@color/white_background"
+            android:textSize="@dimen/txt_type_size" />
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,5 +1,9 @@
 package com.durimaliu.capstonestage2.object;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.net.Uri;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -7,6 +11,41 @@ import com.google.gson.annotations.SerializedName;
  * Created by macbook on 1/19/16.
  */
 public class GetAllTrip {
+
+    public static String TRIP_TABLE = "trips";
+    public static String id_ = "id";
+    public static String name_ = "name";
+    public static String type_ = "type";
+    public static String description_ = "description";
+    public static String startDate_ = "start_date";
+    public static String location_lang_ = "location_lang";
+    public static String location_lat_ = "location_lat";
+    public static String pickup_lang_ = "pickup_lang";
+    public static String pickup_lat_ = "pickup_lat";
+    public static String createdBy_ = "created_by";
+    public static String createdAt_ = "created_at";
+    public static String updated_at_ = "updated_at";
+
+
+    //public static Uri SCORES_CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath(PATH)
+    //.build();
+
+    //URI data
+    public static final String CONTENT_AUTHORITY = "com.durimaliu.capstonestage2";
+    public static final String PATH = "trips";
+    public static Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
+
+
+    //Types
+    public static final String CONTENT_TYPE =
+            ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH;
+    public static final String CONTENT_ITEM_TYPE =
+            ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH;
+
+    public static Uri buildWithLastTrip() {
+        return BASE_CONTENT_URI.buildUpon().appendPath("id").build();
+    }
+
 
     @SerializedName("id")
     @Expose
@@ -213,4 +252,22 @@ public class GetAllTrip {
         this.updatedAt = updatedAt;
     }
 
+    public ContentValues getContentValues() {
+
+        ContentValues values = new ContentValues();
+        values.put(GetAllTrip.id_, id);
+        values.put(GetAllTrip.name_, name);
+        values.put(GetAllTrip.type_, type);
+        values.put(GetAllTrip.description_, description);
+        values.put(GetAllTrip.startDate_, startDate);
+        values.put(GetAllTrip.location_lang_, locationLang);
+        values.put(GetAllTrip.location_lat_, locationLat);
+        values.put(GetAllTrip.pickup_lang_, pickupLang);
+        values.put(GetAllTrip.pickup_lat_, pickupLat);
+        values.put(GetAllTrip.createdBy_, createdBy);
+        values.put(GetAllTrip.createdAt_, createdAt);
+        values.put(GetAllTrip.updated_at_, updatedAt);
+
+        return values;
+    }
 }

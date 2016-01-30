@@ -21,7 +21,7 @@ public class Ntrip extends Application {
     }
 
     // The following line should be changed to include the correct property id.
-    private static final String PROPERTY_ID = "UA-73074448-1";
+//    private static final String PROPERTY_ID = "UA-73074448-1";
 
     /**
      * Enum used to identify the tracker that needs to be used for tracking.
@@ -46,7 +46,7 @@ public class Ntrip extends Application {
         if (!mTrackers.containsKey(trackerId)) {
 
             GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
-            Tracker t = analytics.newTracker(PROPERTY_ID);
+            Tracker t = analytics.newTracker(R.xml.global_tracker);
 
             mTrackers.put(trackerId, t);
 
